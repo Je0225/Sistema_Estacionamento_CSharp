@@ -8,3 +8,13 @@ C:\Users\User\Documents\EstacionamentoForms\EstacionamentoForms\obj\Debug\Estaci
 C:\Users\User\Documents\EstacionamentoForms\EstacionamentoForms\obj\Debug\EstacionamentoForms.exe
 C:\Users\User\Documents\EstacionamentoForms\EstacionamentoForms\obj\Debug\EstacionamentoForms.pdb
 C:\Users\User\Documents\EstacionamentoForms\EstacionamentoForms\obj\Debug\EstacionamentoForms.FormPrincipal.resources
+C:\Users\User\Documents\Sources\CSharp\EstacionamentoForms\bin\Debug\EstacionamentoForms.exe.config
+C:\Users\User\Documents\Sources\CSharp\EstacionamentoForms\bin\Debug\EstacionamentoForms.exe
+C:\Users\User\Documents\Sources\CSharp\EstacionamentoForms\bin\Debug\EstacionamentoForms.pdb
+C:\Users\User\Documents\Sources\CSharp\EstacionamentoForms\obj\Debug\EstacionamentoForms.csproj.AssemblyReference.cache
+C:\Users\User\Documents\Sources\CSharp\EstacionamentoForms\obj\Debug\EstacionamentoForms.FormPrincipal.resources
+C:\Users\User\Documents\Sources\CSharp\EstacionamentoForms\obj\Debug\EstacionamentoForms.Properties.Resources.resources
+C:\Users\User\Documents\Sources\CSharp\EstacionamentoForms\obj\Debug\EstacionamentoForms.csproj.GenerateResource.cache
+C:\Users\User\Documents\Sources\CSharp\EstacionamentoForms\obj\Debug\EstacionamentoForms.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Sources\CSharp\EstacionamentoForms\obj\Debug\EstacionamentoForms.exe
+C:\Users\User\Documents\Sources\CSharp\EstacionamentoForms\obj\Debug\EstacionamentoForms.pdb

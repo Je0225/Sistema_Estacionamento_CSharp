@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -6,46 +7,14 @@ namespace EstacionamentoForms {
 
   public partial class FormPrincipal : Form {
 
+    private List<Veiculo> Veiculos { get; set; }
+
+    private Veiculo VeiculoSelecionado { get; set; }
+
     public FormPrincipal() {
       InitializeComponent();
       LimpaTexto();
-    }
-
-    private void btnAdicionar_Click(object sender, EventArgs e) {
-      //placa exemplo: cqr4l31
-      String textoDigitado = tbPlaca.Text.Trim().ToUpper();
-      Boolean podeAdicionar = Regex.IsMatch(textoDigitado, "[a-zA-Z]{3}\\d[a-zA-Z]\\d{2}");
-
-      if (textoDigitado == "" || textoDigitado.Length != 7) {
-        MessageBox.Show(@"Dígite uma placa válida!");
-        return;
-      }
-      if (lvListaPlacas.Items.ContainsKey(textoDigitado)) {
-        MessageBox.Show(@"Essa placa já está na lista");
-        return;
-      }
-      if (podeAdicionar) {
-        lvListaPlacas.Items.Add(textoDigitado);
-        tbPlaca.Clear();
-        tbPlaca.Focus();
-      } else {
-        MessageBox.Show(@"Não há digitos da placa ou os dígitos não são válidos, a placa deve seguir o padrão 'LLLNLNN'");
-      }
-    }
-
-    private void btnLiberar_Click(object sender, EventArgs e) {
-      if (lvListaPlacas.SelectedItems.Count == 0) {
-        MessageBox.Show(@"Não há nenhuma placa selecionada para liberar do estacionamento");
-        return;
-      }
-      lblPlacaCustoResult.Text = lvListaPlacas.SelectedItems[0].Text;
-      lvListaPlacas.SelectedItems[0].Remove();
-      tbPlaca.Focus();
-      Random horasAleatorias = new Random();
-      int horas = horasAleatorias.Next(1, 5);
-      double horasAPagar = horas * 12.50 + 10;
-      lblHorasResult.Text = horas.ToString();
-      lblAPagarResult.Text = horas + @" * 12,50 (preço por hora) + 10 (preço inicial) = " + horasAPagar;
+      Veiculos = new List<Veiculo>();
     }
 
     private void LimpaTexto() {
@@ -54,19 +23,64 @@ namespace EstacionamentoForms {
       lblPlacaCustoResult.Text = "";
     }
 
+    private void AdicionarVeiculo() {
+      String textoDigitado = tbPlaca.Text.Trim().ToUpper();
+
+      if (textoDigitado == "" || textoDigitado.Length != 7 || !Regex.IsMatch(textoDigitado, "[a-zA-Z]{3}\\d[a-zA-Z]\\d{2}")) {
+        MessageBox.Show(@"Dígite uma placa válida! a placa deve seguir o padrão 'LLLNLNN'");
+        return;
+      }
+      if (Veiculos.Exists(v => v.Placa == textoDigitado)) {
+        MessageBox.Show(@"Essa placa já está na lista");
+        return;
+      }
+
+      Veiculo veiculo = new Veiculo(textoDigitado);
+      Veiculos.Add(veiculo);
+      lvListaPlacas.Items.Add(veiculo.Placa);
+      tbPlaca.Clear();
+      tbPlaca.Focus();
+    }
+
+    private void btnAdicionar_Click(object sender, EventArgs e) {
+      AdicionarVeiculo();
+    }
+
+    private void tbPlaca_KeyDown(object sender, KeyEventArgs e) {
+      if (e.KeyCode == Keys.Enter) {
+        AdicionarVeiculo();
+      }
+    }
+
+    private void btnLiberar_Click(object sender, EventArgs e) {
+      if (lvListaPlacas.SelectedItems.Count == 0) {
+        MessageBox.Show(@"Não há nenhuma placa selecionada para liberar do estacionamento");
+        return;
+      }
+      lblPlacaCustoResult.Text = VeiculoSelecionado.Placa;
+      lvListaPlacas.SelectedItems[0].Remove();
+      tbPlaca.Focus();
+      VeiculoSelecionado.CalculaValorAPagar();
+      lblHorasResult.Text = VeiculoSelecionado.HorasAPagar.ToString();
+      lblAPagarResult.Text = $@"{VeiculoSelecionado.HorasAPagar} * {RegrasDeNegocio.preçoHora} (preço por hora) + {RegrasDeNegocio.preçoInicial} (preço inicial) = {VeiculoSelecionado.Valor}";
+    }
+
     private void btnPago_Click(object sender, EventArgs e) {
       if (lblHorasResult.Text == "" && lblAPagarResult.Text == "" && lblPlacaCustoResult.Text == "") {
         MessageBox.Show(@"Selecione um veículo para pagar");
         return;
       }
+      VeiculoSelecionado.Pago = true;
+      Veiculos.Remove(VeiculoSelecionado);
       LimpaTexto();
+      MessageBox.Show($@"Veículo {VeiculoSelecionado.Placa} liberado!");
     }
 
-    private void tbPlaca_KeyDown(object sender, KeyEventArgs e) {
-      if (e.KeyCode == Keys.Enter) {
-        btnAdicionar.PerformClick();
+    private void lvListaPlacas_SelectedIndexChanged(object sender, EventArgs e) {
+      if (lvListaPlacas.SelectedItems.Count > 0) {
+        VeiculoSelecionado = Veiculos.Find(v => v.Placa == lvListaPlacas.SelectedItems[0].Text);
       }
     }
-  }
 
+  }
 }

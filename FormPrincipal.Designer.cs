@@ -38,12 +38,12 @@
       this.btnLiberar = new System.Windows.Forms.Button();
       this.gbCusto = new System.Windows.Forms.GroupBox();
       this.lblPlacaCustoResult = new System.Windows.Forms.Label();
-      this.lblPlacaCusto = new System.Windows.Forms.Label();
-      this.btnPago = new System.Windows.Forms.Button();
-      this.lblAPagar = new System.Windows.Forms.Label();
-      this.lblHoras = new System.Windows.Forms.Label();
-      this.lblAPagarResult = new System.Windows.Forms.Label();
       this.lblHorasResult = new System.Windows.Forms.Label();
+      this.lblPlacaCusto = new System.Windows.Forms.Label();
+      this.lblHoras = new System.Windows.Forms.Label();
+      this.btnPago = new System.Windows.Forms.Button();
+      this.lblAPagarResult = new System.Windows.Forms.Label();
+      this.lblAPagar = new System.Windows.Forms.Label();
       this.gbCadastro.SuspendLayout();
       this.gpGaragem.SuspendLayout();
       this.gbCusto.SuspendLayout();
@@ -104,6 +104,7 @@
       this.lvListaPlacas.BackgroundImageTiled = true;
       this.lvListaPlacas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnPlacas});
+      this.lvListaPlacas.FullRowSelect = true;
       this.lvListaPlacas.HideSelection = false;
       this.lvListaPlacas.Location = new System.Drawing.Point(15, 19);
       this.lvListaPlacas.MultiSelect = false;
@@ -112,6 +113,7 @@
       this.lvListaPlacas.TabIndex = 3;
       this.lvListaPlacas.UseCompatibleStateImageBehavior = false;
       this.lvListaPlacas.View = System.Windows.Forms.View.Details;
+      this.lvListaPlacas.SelectedIndexChanged += new System.EventHandler(this.lvListaPlacas_SelectedIndexChanged);
       // 
       // columnPlacas
       // 
@@ -130,15 +132,15 @@
       // 
       // gbCusto
       // 
+      this.gbCusto.Controls.Add(this.lblAPagarResult);
+      this.gbCusto.Controls.Add(this.lblAPagar);
       this.gbCusto.Controls.Add(this.lblPlacaCustoResult);
       this.gbCusto.Controls.Add(this.lblHorasResult);
-      this.gbCusto.Controls.Add(this.lblAPagarResult);
       this.gbCusto.Controls.Add(this.lblPlacaCusto);
       this.gbCusto.Controls.Add(this.lblHoras);
-      this.gbCusto.Controls.Add(this.lblAPagar);
       this.gbCusto.Location = new System.Drawing.Point(12, 263);
       this.gbCusto.Name = "gbCusto";
-      this.gbCusto.Size = new System.Drawing.Size(271, 47);
+      this.gbCusto.Size = new System.Drawing.Size(345, 55);
       this.gbCusto.TabIndex = 3;
       this.gbCusto.TabStop = false;
       this.gbCusto.Text = "Custo";
@@ -147,79 +149,79 @@
       // 
       this.lblPlacaCustoResult.AutoSize = true;
       this.lblPlacaCustoResult.BackColor = System.Drawing.SystemColors.ControlLightLight;
-      this.lblPlacaCustoResult.Location = new System.Drawing.Point(45, 18);
+      this.lblPlacaCustoResult.Location = new System.Drawing.Point(58, 18);
       this.lblPlacaCustoResult.Name = "lblPlacaCustoResult";
       this.lblPlacaCustoResult.Size = new System.Drawing.Size(43, 13);
       this.lblPlacaCustoResult.TabIndex = 7;
       this.lblPlacaCustoResult.Text = "lblplaca";
       // 
-      // lblPlacaCusto
-      // 
-      this.lblPlacaCusto.AutoSize = true;
-      this.lblPlacaCusto.Location = new System.Drawing.Point(8, 17);
-      this.lblPlacaCusto.Name = "lblPlacaCusto";
-      this.lblPlacaCusto.Size = new System.Drawing.Size(37, 13);
-      this.lblPlacaCusto.TabIndex = 4;
-      this.lblPlacaCusto.Text = "Placa:";
-      // 
-      // btnPago
-      // 
-      this.btnPago.Location = new System.Drawing.Point(289, 275);
-      this.btnPago.Name = "btnPago";
-      this.btnPago.Size = new System.Drawing.Size(68, 26);
-      this.btnPago.TabIndex = 5;
-      this.btnPago.Text = "Pago";
-      this.btnPago.UseVisualStyleBackColor = true;
-      this.btnPago.Click += new System.EventHandler(this.btnPago_Click);
-      // 
-      // lblAPagar
-      // 
-      this.lblAPagar.AutoSize = true;
-      this.lblAPagar.Location = new System.Drawing.Point(98, 18);
-      this.lblAPagar.Name = "lblAPagar";
-      this.lblAPagar.Size = new System.Drawing.Size(47, 13);
-      this.lblAPagar.TabIndex = 2;
-      this.lblAPagar.Text = "A pagar:";
-      // 
-      // lblHoras
-      // 
-      this.lblHoras.AutoSize = true;
-      this.lblHoras.Location = new System.Drawing.Point(189, 19);
-      this.lblHoras.Name = "lblHoras";
-      this.lblHoras.Size = new System.Drawing.Size(38, 13);
-      this.lblHoras.TabIndex = 3;
-      this.lblHoras.Text = "Horas:";
-      // 
-      // lblAPagarResult
-      // 
-      this.lblAPagarResult.AutoSize = true;
-      this.lblAPagarResult.BackColor = System.Drawing.SystemColors.ControlLightLight;
-      this.lblAPagarResult.Location = new System.Drawing.Point(146, 19);
-      this.lblAPagarResult.Name = "lblAPagarResult";
-      this.lblAPagarResult.Size = new System.Drawing.Size(35, 13);
-      this.lblAPagarResult.TabIndex = 5;
-      this.lblAPagarResult.Text = "label1";
-      // 
       // lblHorasResult
       // 
       this.lblHorasResult.AutoSize = true;
       this.lblHorasResult.BackColor = System.Drawing.SystemColors.ControlLightLight;
-      this.lblHorasResult.Location = new System.Drawing.Point(227, 20);
+      this.lblHorasResult.Location = new System.Drawing.Point(297, 19);
       this.lblHorasResult.Name = "lblHorasResult";
       this.lblHorasResult.Size = new System.Drawing.Size(35, 13);
       this.lblHorasResult.TabIndex = 6;
       this.lblHorasResult.Text = "label2";
       // 
+      // lblPlacaCusto
+      // 
+      this.lblPlacaCusto.AutoSize = true;
+      this.lblPlacaCusto.Location = new System.Drawing.Point(21, 17);
+      this.lblPlacaCusto.Name = "lblPlacaCusto";
+      this.lblPlacaCusto.Size = new System.Drawing.Size(37, 13);
+      this.lblPlacaCusto.TabIndex = 4;
+      this.lblPlacaCusto.Text = "Placa:";
+      // 
+      // lblHoras
+      // 
+      this.lblHoras.AutoSize = true;
+      this.lblHoras.Location = new System.Drawing.Point(259, 18);
+      this.lblHoras.Name = "lblHoras";
+      this.lblHoras.Size = new System.Drawing.Size(38, 13);
+      this.lblHoras.TabIndex = 3;
+      this.lblHoras.Text = "Horas:";
+      // 
+      // btnPago
+      // 
+      this.btnPago.Location = new System.Drawing.Point(289, 321);
+      this.btnPago.Name = "btnPago";
+      this.btnPago.Size = new System.Drawing.Size(68, 21);
+      this.btnPago.TabIndex = 5;
+      this.btnPago.Text = "Pago";
+      this.btnPago.UseVisualStyleBackColor = true;
+      this.btnPago.Click += new System.EventHandler(this.btnPago_Click);
+      // 
+      // lblAPagarResult
+      // 
+      this.lblAPagarResult.AutoSize = true;
+      this.lblAPagarResult.BackColor = System.Drawing.SystemColors.ControlLightLight;
+      this.lblAPagarResult.Location = new System.Drawing.Point(58, 35);
+      this.lblAPagarResult.Name = "lblAPagarResult";
+      this.lblAPagarResult.Size = new System.Drawing.Size(35, 13);
+      this.lblAPagarResult.TabIndex = 9;
+      this.lblAPagarResult.Text = "label1";
+      // 
+      // lblAPagar
+      // 
+      this.lblAPagar.AutoSize = true;
+      this.lblAPagar.Location = new System.Drawing.Point(10, 34);
+      this.lblAPagar.Name = "lblAPagar";
+      this.lblAPagar.Size = new System.Drawing.Size(47, 13);
+      this.lblAPagar.TabIndex = 8;
+      this.lblAPagar.Text = "A pagar:";
+      // 
       // FormPrincipal
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(371, 319);
+      this.ClientSize = new System.Drawing.Size(371, 351);
       this.Controls.Add(this.btnPago);
       this.Controls.Add(this.gbCusto);
       this.Controls.Add(this.gpGaragem);
       this.Controls.Add(this.gbCadastro);
-      this.MinimizeBox = false;
+      this.MaximizeBox = false;
       this.Name = "FormPrincipal";
       this.Text = "Estacionamento";
       this.gbCadastro.ResumeLayout(false);
@@ -246,8 +248,8 @@
         private System.Windows.Forms.Label lblPlacaCustoResult;
         private System.Windows.Forms.ColumnHeader columnPlacas;
     private System.Windows.Forms.Label lblHorasResult;
-    private System.Windows.Forms.Label lblAPagarResult;
     private System.Windows.Forms.Label lblHoras;
+    private System.Windows.Forms.Label lblAPagarResult;
     private System.Windows.Forms.Label lblAPagar;
   }
 }
