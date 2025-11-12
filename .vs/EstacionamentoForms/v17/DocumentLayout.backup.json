@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\Sources\\CSharp\\EstacionamentoForms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{388016C7-D719-451B-9649-940AB0FCC2AB}|EstacionamentoForms.csproj|c:\\users\\user\\documents\\sources\\csharp\\estacionamentoforms\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{388016C7-D719-451B-9649-940AB0FCC2AB}|EstacionamentoForms.csproj|solutionrelative:formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{388016C7-D719-451B-9649-940AB0FCC2AB}|EstacionamentoForms.csproj|C:\\Users\\User\\Documents\\Sources\\CSharp\\EstacionamentoForms\\estacionamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{388016C7-D719-451B-9649-940AB0FCC2AB}|EstacionamentoForms.csproj|solutionrelative:estacionamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{388016C7-D719-451B-9649-940AB0FCC2AB}|EstacionamentoForms.csproj|C:\\Users\\User\\Documents\\Sources\\CSharp\\EstacionamentoForms\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{388016C7-D719-451B-9649-940AB0FCC2AB}|EstacionamentoForms.csproj|solutionrelative:formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{388016C7-D719-451B-9649-940AB0FCC2AB}|EstacionamentoForms.csproj|C:\\Users\\User\\Documents\\Sources\\CSharp\\EstacionamentoForms\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{388016C7-D719-451B-9649-940AB0FCC2AB}|EstacionamentoForms.csproj|solutionrelative:formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{388016C7-D719-451B-9649-940AB0FCC2AB}|EstacionamentoForms.csproj|C:\\Users\\User\\Documents\\Sources\\CSharp\\EstacionamentoForms\\veiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{388016C7-D719-451B-9649-940AB0FCC2AB}|EstacionamentoForms.csproj|solutionrelative:veiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{388016C7-D719-451B-9649-940AB0FCC2AB}|EstacionamentoForms.csproj|C:\\Users\\User\\Documents\\Sources\\CSharp\\EstacionamentoForms\\regrasdenegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{388016C7-D719-451B-9649-940AB0FCC2AB}|EstacionamentoForms.csproj|solutionrelative:regrasdenegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{388016C7-D719-451B-9649-940AB0FCC2AB}|EstacionamentoForms.csproj|C:\\Users\\User\\Documents\\Sources\\CSharp\\EstacionamentoForms\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{388016C7-D719-451B-9649-940AB0FCC2AB}|EstacionamentoForms.csproj|solutionrelative:formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,15 +38,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RegrasDeNegocio.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\EstacionamentoForms\\RegrasDeNegocio.cs",
-              "RelativeDocumentMoniker": "RegrasDeNegocio.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\EstacionamentoForms\\RegrasDeNegocio.cs",
-              "RelativeToolTip": "RegrasDeNegocio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Estacionamento.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\EstacionamentoForms\\Estacionamento.cs",
+              "RelativeDocumentMoniker": "Estacionamento.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\EstacionamentoForms\\Estacionamento.cs",
+              "RelativeToolTip": "Estacionamento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T11:55:35.027Z",
+              "WhenOpened": "2025-11-12T18:01:39.677Z",
               "EditorCaption": ""
             },
             {
@@ -57,27 +57,27 @@
               "RelativeDocumentMoniker": "Veiculo.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\EstacionamentoForms\\Veiculo.cs",
               "RelativeToolTip": "Veiculo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-24T20:44:28.32Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FormPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\EstacionamentoForms\\FormPrincipal.cs",
               "RelativeDocumentMoniker": "FormPrincipal.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\EstacionamentoForms\\FormPrincipal.cs",
               "RelativeToolTip": "FormPrincipal.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAmwEoAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-24T18:31:17.605Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "FormPrincipal.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\EstacionamentoForms\\FormPrincipal.cs",
               "RelativeDocumentMoniker": "FormPrincipal.cs",
